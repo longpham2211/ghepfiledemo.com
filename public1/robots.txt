@@ -1,0 +1,9 @@
+# Allow all web crawlers to access the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of intermediate pages that are not useful for users
+Disallow: /tinymerge.html
+
+# Location of sitemap file
+Sitemap: https://your-domain.com/sitemap.xml

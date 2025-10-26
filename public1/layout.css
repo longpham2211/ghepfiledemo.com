@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Thay min-height thành height */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */ /* Xóa */
+    /* align-items: auto; */ /* Xóa */
+    font-family: Arial, sans-serif;
+    background-color: #f5f0f000;
+    padding-top: 70px; /* Giảm padding cho khớp với chiều cao navbar */
+    box-sizing: border-box; /* Thêm để padding không làm tăng chiều cao */
+    overflow: hidden; /* Ẩn thanh cuộn của body */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* chia 3 phần: trái - giữa - phải */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px; 
+  padding: 0 40px;
+  background-color: #ffffff;        
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: #cccccc78;
+  opacity: 1;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 1000;
+  font-family: 'Noto Sans', sans-serif;
+  color: #8a2e1ede;
+}
+
+.demo-badge {
+  background-color: #f59e0b;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-left: 8px;
+  user-select: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none; /* Thêm để loại bỏ gạch chân */
+}
+
+.nav-item:hover {
+  color: #2563eb;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-search {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.sign-in-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #1e40af;
+}
+
+
+/* Đẩy nội dung xuống dưới để tránh che bởi navbar */
+/* ĐÃ GỘP padding-top vào block body phía trên, bỏ block body trùng lặp ở đây */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+    margin-top: 2cm;
+    min-height: calc(100vh - 200px);
+    flex-grow: 1; /* Thêm để container chiếm không gian */
+    overflow-y: auto; /* Thêm thanh cuộn khi cần */
+}
+
+.game-card {
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+    transition: 0.3s; 
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    background-color: #e6f0ff;
+    cursor: pointer;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.game-title {
+    margin-left: 5cm;
+    color: #333;
+}
+
+.game-card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.01);
+}
+
+.footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.donate-link {
+    position: relative;
+    display: inline-block;
+}
+
+.qr-popup {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border: 1px solid #eee;
+}
+
+.donate-link:hover .qr-popup {
+    display: block;
+}
+
+.qr-popup img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.qr-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* --- Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        height: 60px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .nav-menu, .nav-search {
+        display: none; /* Ẩn menu và ô tìm kiếm trên mobile */
+    }
+
+    .nav-left {
+        gap: 8px;
+    }
+
+    .nav-logo {
+        height: 35px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .demo-badge {
+        font-size: 10px;
+        padding: 2px 6px;
+        margin-left: 4px;
+    }
+
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+
+    /* Vô hiệu hóa popup QR trên mobile để tránh che nội dung, người dùng có thể click trực tiếp */
+    .donate-link:hover .qr-popup {
+        display: none;
+    }
+}

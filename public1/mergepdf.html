@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- 1. SEO Meta Tags -->
+  <title>Ghép File PDF Online - Nhanh, Miễn Phí & Bảo Mật | All in One</title>
+  <meta name="description" content="Công cụ ghép file PDF trực tuyến miễn phí. Hợp nhất nhiều file PDF thành một tài liệu duy nhất một cách nhanh chóng, dễ dàng và an toàn. Không cần cài đặt." />
+  <meta name="keywords" content="ghép pdf, nối pdf, gộp pdf, hợp nhất pdf, merge pdf, combine pdf, pdf online, công cụ pdf" />
+  <link rel="canonical" href="https://your-domain.com/mergepdf.html" />
+
+  <!-- 2. Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/mergepdf.html" />
+  <meta property="og:title" content="Ghép File PDF Online - Nhanh, Miễn Phí & Bảo Mật | All in One" />
+  <meta property="og:description" content="Công cụ ghép file PDF trực tuyến miễn phí. Hợp nhất nhiều file PDF thành một tài liệu duy nhất một cách nhanh chóng, dễ dàng và an toàn." />
+  <meta property="og:image" content="https://your-domain.com/assets/og-image.png" />
+  <meta property="og:site_name" content="All in One Tools" />
+
+  <!-- 3. Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://your-domain.com/mergepdf.html" />
+  <meta name="twitter:title" content="Ghép File PDF Online - Nhanh, Miễn Phí & Bảo Mật | All in One" />
+  <meta name="twitter:description" content="Công cụ ghép file PDF trực tuyến miễn phí. Hợp nhất nhiều file PDF thành một tài liệu duy nhất một cách nhanh chóng, dễ dàng và an toàn." />
+  <meta name="twitter:image" content="https://your-domain.com/assets/og-image.png" />
+
+  <link rel="stylesheet" href="mergepdf.css" />
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="longpham.css">
+
+  <!-- 4. JSON-LD Schema for WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ghép File PDF - All in One",
+    "description": "Công cụ ghép file PDF trực tuyến miễn phí. Hợp nhất nhiều file PDF thành một tài liệu duy nhất một cách nhanh chóng, dễ dàng và an toàn. Không cần cài đặt.",
+    "applicationCategory": "Utilities",
+    "operatingSystem": "All",
+    "url": "https://your-domain.com/mergepdf.html",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "VND"
+    },
+    "sameAs": [
+      "https://github.com/your-username/your-repo"
+    ]
+  }
+  </script>
+</head>
+<body>
+    <header class="navbar">
+        <!-- Trái -->
+        <div class="nav-left">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                <img src="./pngtree-vietnam-flag-transparent-watercolor-painted-brush-png-image_6099064.png" alt="Logo" class="nav-logo">
+                <div class="divider"></div>
+                <span class="brand">All in One</span>
+            </a>
+            <span class="demo-badge">DEMO</span>
+        </div>
+
+        <!-- Giữa: Cấu trúc điều hướng cho Sitelinks -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <a href="index.html" class="nav-item">Trang chủ</a>
+            <a href="mergepdf.html" class="nav-item">Ghép PDF</a>
+            <a href="compress-pdf.html" class="nav-item">Nén PDF</a>
+            <a href="split-pdf.html" class="nav-item">Tách PDF</a>
+            <a href="about.html" class="nav-item">Giới thiệu</a>
+            <a href="contact.html" class="nav-item">Liên hệ</a>
+        </nav>
+
+        <!-- Phải -->
+        <div class="nav-right">
+            <input type="text" class="nav-search" placeholder="Search...">
+            <button class="sign-in-btn">Sign In</button>
+        </div>
+    </header>
+
+  <div class="merge-container">
+    <h1>Chọn file PDF cần ghép</h1>
+    <p>Kéo thả file vào đây hoặc click để chọn file</p>
+
+    <div class="upload-box" id="dropZone">
+      <button type="button" class="select-btn" id="selectBtn">
+        <i class="upload-icon">📄</i> Chọn file PDF
+      </button>
+      <small class="hint-text">(Nhớ bấm Ctrl + Click chuột để chọn nhiều file)</small>
+      <input type="file" id="fileInput" multiple accept=".pdf" style="display: none">
+      <div class="drop-text">Kéo thả file PDF vào đây</div>
+      <div id="fileList" class="file-list"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="mergepdf.js"></script>
+       <footer class="footer">
+        <br>
+        Hiện tại em đang là sinh viên năm 1, các bác ủng hộ em gói mỳ em cảm ơn!! 
+        <span class="donate-link">
+          <a href="https://qr.1900.live/0978742917/MBBANK" target="_blank">Ủng hộ tại đây</a>
+          <div class="qr-popup">
+            <img src="donate-qr.png" alt="QR Code Donate">
+          </div>
+        </span>
+        <br>
+        © longpham08937@gmail.com. ALL rights reserved. <br>
+        Made by LONGPHAM
+    </footer>
+</body>
+</html>
